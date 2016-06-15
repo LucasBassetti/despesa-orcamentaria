@@ -9,6 +9,6 @@ Repositório para o conteúdo sobre autorização e execução da despesa or
 
 As questões de competência podem ser testadas no link abaixo.
 
-* [SPARQL Endpoint](dev.nemo.inf.ufes.br:5820/dpf#!/query)
+* <a href="http://dev.nemo.inf.ufes.br:5820/dpf#!/query" target="_blank">SPARQL Endpoint</a>
 * Username: ``` nemo ```
 * Password: ``` nemo ```
