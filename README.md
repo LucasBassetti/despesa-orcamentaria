@@ -7,11 +7,17 @@ Para o estudo de caso, foram utilizados dados sobre execução orçamentária do
 * **Órgão Superior:** Ministério da Educação
 * **Órgão / Entidade Vinculada:** Universidade Federal do Espírito Santo
 
+### Ontologia
+
+A ontologia em OWL encontra-se disponível no link abaixo.
+
+* [Ontologia OWL](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
+
 ### Questões de Competência
 
 Questões de Competência (QCs) são um meio de especificar requisitos funcionais da ontologia, na medida em que referem-se ao conhecimento a ser representado na ontologia.
 
-Cada questão apresenta sua respectiva consulta SPARQL, onde a resposta pode ser testada no endpoint disponibilizado.
+Questões de competência foram implementadas em consultas SPARQL dando origem a casos de teste para validação da ontologia. Cada questão apresenta sua respectiva consulta SPARQL, cuja resposta pode ser testada no endpoint disponibilizado.
 
 * [Questões de Competência](https://github.com/LucasBassetti/despesa-orcamentaria/tree/master/questoes-de-competencia)
 
