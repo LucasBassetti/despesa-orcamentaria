@@ -9,9 +9,11 @@ Para o estudo de caso, foram utilizados dados sobre execução orçamentária do
 
 ### Ontologia
 
-A ontologia em OWL encontra-se disponível no link abaixo.
+A ontologia encontra-se nos formatos disponíveis nos links abaixo.
 
-* [Ontologia OWL](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
+* [OntoUML](http://ontology.com.br/loa/spec/)
+* [OWL](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
+* [Menthor](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.menthor) ([Link da Ferramenta](http://menthor.net))
 
 ### Questões de Competência
 
