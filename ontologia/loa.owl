@@ -51,7 +51,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#credor2">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credor</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho5"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
     </owl:ObjectProperty>
     
 
@@ -86,7 +86,6 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho2">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itempagamento3"/>
     </owl:ObjectProperty>
     
 
@@ -95,7 +94,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho3">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao1"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itempagamento3"/>
     </owl:ObjectProperty>
     
 
@@ -104,7 +103,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho4">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao1"/>
     </owl:ObjectProperty>
     
 
@@ -113,6 +112,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho5">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
     </owl:ObjectProperty>
     
 
@@ -137,6 +137,23 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhoanulacao">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhoanulacao</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#empenhooriginal -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhooriginal">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhooriginal</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenhoreforco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#empenhoreforco -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhoreforco">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhoreforco</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -171,7 +188,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa2">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho2"/>
     </owl:ObjectProperty>
     
 
@@ -237,7 +254,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa10">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
     </owl:ObjectProperty>
     
 
@@ -472,7 +489,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora1">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao3"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
     </owl:ObjectProperty>
     
 
@@ -481,7 +498,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora2">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento4"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao3"/>
     </owl:ObjectProperty>
     
 
@@ -490,7 +507,7 @@
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora3">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento4"/>
     </owl:ObjectProperty>
     
 
@@ -560,19 +577,19 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Subtitulo -->
+    <!-- http://ontology.com.br/loa/spec/#Subfuncao -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Subtitulo">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtitulo</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Subfuncao">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subfuncao</rdfs:label>
         <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Sufuncao -->
+    <!-- http://ontology.com.br/loa/spec/#Subtitulo -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Sufuncao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sufuncao</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Subtitulo">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtitulo</rdfs:label>
         <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
     </owl:DatatypeProperty>
     
@@ -731,7 +748,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho5"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -815,7 +832,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora1"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -838,7 +855,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho4"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho5"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -854,6 +871,17 @@
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#EmpenhoOriginal">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmpenhoOriginal</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenhoreforco"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#EmpenhoReforco"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
     </owl:Class>
     
@@ -863,6 +891,17 @@
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#EmpenhoReforco">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmpenhoReforco</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenhooriginal"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#EmpenhoOriginal"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
     </owl:Class>
     
@@ -919,7 +958,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho2"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -1010,7 +1049,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1035,6 +1074,11 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Acao"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#FonteRecurso"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1050,12 +1094,12 @@
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Subtitulo"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Subfuncao"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Sufuncao"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Subtitulo"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
@@ -1082,7 +1126,7 @@
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho3"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1142,7 +1186,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho4"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1152,7 +1196,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora2"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1199,6 +1243,24 @@
     
 
 
+    <!-- http://ontology.com.br/loa/spec/#Orgao -->
+
+    <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Orgao">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orgao</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadeorganizacional"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Unidade_Organizacional"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://ontology.com.br/loa/spec/#Outorgante_de_Gasto -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Outorgante_de_Gasto">
@@ -1241,7 +1303,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora3"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1301,7 +1363,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1361,24 +1423,6 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Orgao -->
-
-    <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Orgao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orgao</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadeorganizacional"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Unidade_Organizacional"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1387,6 +1431,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Atividade"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#OperacaoEspecial"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Projeto"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -1412,6 +1464,8 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho6"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho7"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhooriginal"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhoreforco"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#grupodespesa1"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#grupodespesa2"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa1"/>
@@ -1456,14 +1510,6 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadegestora3"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadeorcamentaria"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadeorganizacional"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Atividade"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#OperacaoEspecial"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Projeto"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
