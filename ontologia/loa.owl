@@ -1,4 +1,14 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <rdf:RDF xmlns="http://ontology.com.br/loa/spec/#"
      xml:base="http://ontology.com.br/loa/spec/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -20,512 +30,613 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#categoriaeconomica1 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.anula -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#categoriaeconomica1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categoriaeconomica</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa4"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.anula"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.autoriza -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.Outorgante_de_Gasto -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.Outorgante_de_Gasto">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#categoriaeconomica2 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.UnidadeOrcamentaria -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#categoriaeconomica2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">categoriaeconomica</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemloa6"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.UnidadeOrcamentaria">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#credor1 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.compostoDe -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#credor1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credor</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemDespesa -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#credor2 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#credor2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credor</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#credor3 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.compostoDe.Orgao.Unidade_Organizacional -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#credor3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credor</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao4"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Orgao.Unidade_Organizacional">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#elementodespesa -->
+    <!-- http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#elementodespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elementodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho1 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.conformidadeCom -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.cria -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.cria"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.depende -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.depende"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.depende"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho2 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.depende.Pagamento.Liquidacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.depende.Pagamento.Liquidacao">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.depende"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho3 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.descreve -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itempagamento3"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.descreve"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.favorece -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.favorece"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.favorece.Empenho.Credor -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.favorece.Empenho.Credor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho4 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.favorece.Pagamento.Credor -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho4">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.favorece.Pagamento.Credor">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho5 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho5">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.CategoriaEconomica -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.CategoriaEconomica">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho6 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ElementoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho6">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ElementoDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenho7 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.GrupoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenho7">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenho</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.GrupoDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenhoanulacao -->
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ModalidadeAplicacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhoanulacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhoanulacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ModalidadeAplicacao">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenhooriginal -->
+    <!-- http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.SubelementoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhooriginal">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhooriginal</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenhoreforco"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.SubelementoDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#empenhoreforco -->
+    <!-- http://ontology.com.br/loa/spec/#INV.liquida -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#empenhoreforco">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empenhoreforco</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.liquida"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.paga -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.paga"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreve -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.CategoriaEconomica -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.CategoriaEconomica">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#grupodespesa1 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.GrupoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#grupodespesa1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grupodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemloa2"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.GrupoDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#grupodespesa2 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.ModalidadeAplicacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#grupodespesa2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grupodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa5"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.ModalidadeAplicacao">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa1 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.quita -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.quita"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.realiza -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.realiza"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.realiza.Empenho.UnidadeGestora -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Empenho.UnidadeGestora">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa2 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho2"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa3 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa4 -->
+    <!-- http://ontology.com.br/loa/spec/#INV.refere-se -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa4">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.refere-se"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.reforca -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.reforca"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#anula -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#anula">
+        <rdfs:label rdf:datatype="&xsd;string">EmpenhoAnulacao.anula</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.anula"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa5 -->
+    <!-- http://ontology.com.br/loa/spec/#autoriza -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa5">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemdespesa6 -->
+    <!-- http://ontology.com.br/loa/spec/#autoriza.ItemLoa.Outorgante_de_Gasto -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemdespesa6">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemdespesa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza.ItemLoa.Outorgante_de_Gasto">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.autoriza</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.Outorgante_de_Gasto"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#autoriza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemliquidacao1 -->
+    <!-- http://ontology.com.br/loa/spec/#autoriza.ItemLoa.UnidadeOrcamentaria -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemliquidacao1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemliquidacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza.ItemLoa.UnidadeOrcamentaria">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.autoriza</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.UnidadeOrcamentaria"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#autoriza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemliquidacao2 -->
+    <!-- http://ontology.com.br/loa/spec/#compostoDe -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemliquidacao2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemliquidacao</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao5"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#compostoDe">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa1 -->
+    <!-- http://ontology.com.br/loa/spec/#compostoDe.Empenho.ItemDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Empenho.ItemDespesa">
+        <rdfs:label rdf:datatype="&xsd;string">Empenho.compostoDe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa10 -->
+    <!-- http://ontology.com.br/loa/spec/#compostoDe.Liquidacao.ItemLiquidacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa10">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Liquidacao.ItemLiquidacao">
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao.compostoDe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa13 -->
+    <!-- http://ontology.com.br/loa/spec/#compostoDe.Orgao.Unidade_Organizacional -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa13">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Orgao.Unidade_Organizacional">
+        <rdfs:label rdf:datatype="&xsd;string">Orgao.compostoDe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Orgao.Unidade_Organizacional"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa2 -->
+    <!-- http://ontology.com.br/loa/spec/#compostoDe.Pagamento.ItemPagamento -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Pagamento.ItemPagamento">
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento.compostoDe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#compostoDe"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa3 -->
+    <!-- http://ontology.com.br/loa/spec/#conformidadeCom -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#leiorcamentariaanual1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#conformidadeCom">
+        <rdfs:label rdf:datatype="&xsd;string">Empenho.conformidadeCom</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa6 -->
+    <!-- http://ontology.com.br/loa/spec/#cria -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa6">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#cria">
+        <rdfs:label rdf:datatype="&xsd;string">LeiOrcamentariaAnual.cria</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.cria"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itemloa8 -->
+    <!-- http://ontology.com.br/loa/spec/#depende -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itemloa8">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itemloa</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#depende">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.depende"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itempagamento1 -->
+    <!-- http://ontology.com.br/loa/spec/#depende.Liquidacao.Empenho -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itempagamento1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itempagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#depende.Liquidacao.Empenho">
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao.depende</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#depende"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itempagamento2 -->
+    <!-- http://ontology.com.br/loa/spec/#depende.Pagamento.Liquidacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itempagamento2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itempagamento</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento2"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#depende.Pagamento.Liquidacao">
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento.depende</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.depende.Pagamento.Liquidacao"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#depende"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#itempagamento3 -->
+    <!-- http://ontology.com.br/loa/spec/#descreve -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#itempagamento3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itempagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#descreve">
+        <rdfs:label rdf:datatype="&xsd;string">LeiOrcamentariaAnual.descreve</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.descreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#leiorcamentariaanual1 -->
+    <!-- http://ontology.com.br/loa/spec/#favorece -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#leiorcamentariaanual1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leiorcamentariaanual</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#favorece">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#leiorcamentariaanual2 -->
+    <!-- http://ontology.com.br/loa/spec/#favorece.Empenho.Credor -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#leiorcamentariaanual2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leiorcamentariaanual</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#favorece.Empenho.Credor">
+        <rdfs:label rdf:datatype="&xsd;string">Empenho.favorece</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece.Empenho.Credor"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#favorece"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#liquidacao1 -->
+    <!-- http://ontology.com.br/loa/spec/#favorece.Pagamento.Credor -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquidacao1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquidacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#favorece.Pagamento.Credor">
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento.favorece</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece.Pagamento.Credor"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#favorece"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#liquidacao2 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquidacao2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquidacao</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento3"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#liquidacao3 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia.ItemDespesa.CategoriaEconomica -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquidacao3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquidacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.CategoriaEconomica">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.instancia</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.CategoriaEconomica"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#liquidacao4 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ElementoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquidacao4">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquidacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ElementoDespesa">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.instancia</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ElementoDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#liquidacao5 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia.ItemDespesa.GrupoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquidacao5">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquidacao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.GrupoDespesa">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.instancia</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.GrupoDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#modalidadeaplicacao1 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ModalidadeAplicacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#modalidadeaplicacao1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modalidadeaplicacao</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa6"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ModalidadeAplicacao">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.instancia</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ModalidadeAplicacao"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#modalidadeaplicacao2 -->
+    <!-- http://ontology.com.br/loa/spec/#instancia.ItemDespesa.SubelementoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#modalidadeaplicacao2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modalidadeaplicacao</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemloa13"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.SubelementoDespesa">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.instancia</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.SubelementoDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#instancia"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#orgao -->
+    <!-- http://ontology.com.br/loa/spec/#liquida -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#orgao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orgao</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#liquida">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLiquidacao.liquida</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.liquida"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#outorgantedegasto -->
+    <!-- http://ontology.com.br/loa/spec/#paga -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#outorgantedegasto">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outorgantedegasto</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemloa8"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#paga">
+        <rdfs:label rdf:datatype="&xsd;string">ItemPagamento.paga</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.paga"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#pagamento1 -->
+    <!-- http://ontology.com.br/loa/spec/#prescreve -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#pagamento1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#pagamento2 -->
+    <!-- http://ontology.com.br/loa/spec/#prescreve.ItemLoa.CategoriaEconomica -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#pagamento2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.CategoriaEconomica">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.prescreve</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.CategoriaEconomica"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#pagamento3 -->
+    <!-- http://ontology.com.br/loa/spec/#prescreve.ItemLoa.GrupoDespesa -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#pagamento3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.GrupoDespesa">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.prescreve</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.GrupoDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#pagamento4 -->
+    <!-- http://ontology.com.br/loa/spec/#prescreve.ItemLoa.ModalidadeAplicacao -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#pagamento4">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pagamento</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.ModalidadeAplicacao">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.prescreve</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.ModalidadeAplicacao"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#subelementodespesa1 -->
+    <!-- http://ontology.com.br/loa/spec/#quita -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subelementodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itempagamento1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#quita">
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao.quita</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.quita"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#subelementodespesa2 -->
+    <!-- http://ontology.com.br/loa/spec/#realiza -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subelementodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa3"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#realiza">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#subelementodespesa3 -->
+    <!-- http://ontology.com.br/loa/spec/#realiza.Empenho.UnidadeGestora -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subelementodespesa</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemliquidacao1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#realiza.Empenho.UnidadeGestora">
+        <rdfs:label rdf:datatype="&xsd;string">Empenho.realiza</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Empenho.UnidadeGestora"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#uniao -->
+    <!-- http://ontology.com.br/loa/spec/#realiza.Liquidacao.UnidadeGestora -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#uniao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uniao</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#leiorcamentariaanual2"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#realiza.Liquidacao.UnidadeGestora">
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao.realiza</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#unidadegestora1 -->
+    <!-- http://ontology.com.br/loa/spec/#realiza.Pagamento.UnidadeGestora -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#realiza.Pagamento.UnidadeGestora">
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento.realiza</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#realiza"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#unidadegestora2 -->
+    <!-- http://ontology.com.br/loa/spec/#refere-se -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#liquidacao3"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#refere-se">
+        <rdfs:label rdf:datatype="&xsd;string">ItemPagamento.refere-se</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refere-se"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#unidadegestora3 -->
+    <!-- http://ontology.com.br/loa/spec/#reforca -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadegestora3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadegestora</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#pagamento4"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#unidadeorcamentaria -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadeorcamentaria">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadeorcamentaria</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#itemloa1"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#unidadeorganizacional -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#unidadeorganizacional">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadeorganizacional</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#orgao"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#reforca">
+        <rdfs:label rdf:datatype="&xsd;string">EmpenhoReforco.reforca</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.reforca"/>
     </owl:ObjectProperty>
     
 
@@ -541,138 +652,129 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Acao -->
+    <!-- http://ontology.com.br/loa/spec/#Empenho.valorTotal -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Acao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acao</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Empenho.valorTotal">
+        <rdfs:label rdf:datatype="&xsd;string">Empenho.valorTotal</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorTotal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#FonteRecurso -->
+    <!-- http://ontology.com.br/loa/spec/#ItemDespesa.quantidade -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#FonteRecurso">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FonteRecurso</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#ItemDespesa.quantidade">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.quantidade</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#quantidade"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Funcao -->
+    <!-- http://ontology.com.br/loa/spec/#ItemDespesa.unidadeMedida -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Funcao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funcao</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#ItemDespesa.unidadeMedida">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.unidadeMedida</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#unidadeMedida"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Programa -->
+    <!-- http://ontology.com.br/loa/spec/#ItemDespesa.valorTotal -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Programa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programa</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#ItemDespesa.valorTotal">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.valorTotal</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorTotal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Subfuncao -->
+    <!-- http://ontology.com.br/loa/spec/#ItemDespesa.valorUnitario -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Subfuncao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subfuncao</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#ItemDespesa.valorUnitario">
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa.valorUnitario</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorUnitario"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#Subtitulo -->
+    <!-- http://ontology.com.br/loa/spec/#ItemLoa.valorDotacaoInicial -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Subtitulo">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subtitulo</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#ItemLoa.valorDotacaoInicial">
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa.valorDotacaoInicial</rdfs:label>
         <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorDotacaoInicial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual.anoExercicio -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual.anoExercicio">
+        <rdfs:label rdf:datatype="&xsd;string">LeiOrcamentariaAnual.anoExercicio</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#anoExercicio"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#Liquidacao.valorTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Liquidacao.valorTotal">
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao.valorTotal</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorTotal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#Pagamento.valorTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#Pagamento.valorTotal">
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento.valorTotal</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#valorTotal"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://ontology.com.br/loa/spec/#anoExercicio -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#anoExercicio">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anoExercicio</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#anoExercicio"/>
     
 
 
     <!-- http://ontology.com.br/loa/spec/#quantidade -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#quantidade">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantidade</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#quantidade"/>
     
 
 
     <!-- http://ontology.com.br/loa/spec/#unidadeMedida -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#unidadeMedida">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unidadeMedida</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#unidadeMedida"/>
     
 
 
     <!-- http://ontology.com.br/loa/spec/#valorDotacaoInicial -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorDotacaoInicial">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorDotacaoInicial</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorDotacaoInicial"/>
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#valorTotal1 -->
+    <!-- http://ontology.com.br/loa/spec/#valorTotal -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorTotal1">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorTotal</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#valorTotal2 -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorTotal2">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorTotal</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#valorTotal3 -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorTotal3">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorTotal</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#valorTotal4 -->
-
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorTotal4">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorTotal</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorTotal"/>
     
 
 
     <!-- http://ontology.com.br/loa/spec/#valorUnitario -->
 
-    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorUnitario">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valorUnitario</rdfs:label>
-        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#valorUnitario"/>
     
 
 
@@ -690,7 +792,6 @@
     <!-- http://ontology.com.br/loa/spec/#Acao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Acao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -719,19 +820,19 @@
     <!-- http://ontology.com.br/loa/spec/#CategoriaEconomica -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#CategoriaEconomica">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CategoriaEconomica</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">CategoriaEconomica</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa4"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.CategoriaEconomica"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa6"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.CategoriaEconomica"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -743,24 +844,24 @@
     <!-- http://ontology.com.br/loa/spec/#Credor -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Credor">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credor</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Credor</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho6"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece.Empenho.Credor"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquidacao4"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#pagamento1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.favorece.Pagamento.Credor"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.quita"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -772,14 +873,14 @@
     <!-- http://ontology.com.br/loa/spec/#ElementoDespesa -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ElementoDespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ElementoDespesa</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">ElementoDespesa</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ElementoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -791,7 +892,7 @@
     <!-- http://ontology.com.br/loa/spec/#Empenho -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Empenho">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empenho</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Empenho</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -803,42 +904,42 @@
                         </owl:unionOf>
                     </owl:Class>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#compostoDe.Empenho.ItemDespesa"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#credor2"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.anula"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#EmpenhoAnulacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa10"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itempagamento3"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemPagamento"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquidacao1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.refere-se"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemPagamento"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#conformidadeCom"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#favorece.Empenho.Credor"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#realiza.Empenho.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorTotal4"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Empenho.valorTotal"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -850,14 +951,14 @@
     <!-- http://ontology.com.br/loa/spec/#EmpenhoAnulacao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#EmpenhoAnulacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmpenhoAnulacao</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">EmpenhoAnulacao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho5"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#anula"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -870,14 +971,14 @@
     <!-- http://ontology.com.br/loa/spec/#EmpenhoOriginal -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#EmpenhoOriginal">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmpenhoOriginal</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">EmpenhoOriginal</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenhoreforco"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.reforca"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#EmpenhoReforco"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -890,14 +991,14 @@
     <!-- http://ontology.com.br/loa/spec/#EmpenhoReforco -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#EmpenhoReforco">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EmpenhoReforco</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">EmpenhoReforco</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenhooriginal"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#reforca"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#EmpenhoOriginal"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -910,14 +1011,14 @@
     <!-- http://ontology.com.br/loa/spec/#Ente_Federativo -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Ente_Federativo">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ente Federativo</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Ente Federativo</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#leiorcamentariaanual2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.cria"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -929,19 +1030,19 @@
     <!-- http://ontology.com.br/loa/spec/#GrupoDespesa -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#GrupoDespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GrupoDespesa</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">GrupoDespesa</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa5"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.GrupoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.GrupoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -953,54 +1054,54 @@
     <!-- http://ontology.com.br/loa/spec/#ItemDespesa -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ItemDespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ItemDespesa</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">ItemDespesa</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemDespesa"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#categoriaeconomica1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.CategoriaEconomica"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#CategoriaEconomica"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#elementodespesa"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ElementoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ElementoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#grupodespesa2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.GrupoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#GrupoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#modalidadeaplicacao1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ModalidadeAplicacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ModalidadeAplicacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#subelementodespesa2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.SubelementoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#SubelementoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#quantidade"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa.quantidade"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadeMedida"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa.unidadeMedida"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorTotal1"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa.valorTotal"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorUnitario"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa.valorUnitario"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1012,18 +1113,18 @@
     <!-- http://ontology.com.br/loa/spec/#ItemLiquidacao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ItemLiquidacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ItemLiquidacao</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">ItemLiquidacao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquidacao5"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#subelementodespesa3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquida"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#SubelementoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1035,81 +1136,7 @@
     <!-- http://ontology.com.br/loa/spec/#ItemLoa -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ItemLoa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ItemLoa</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#leiorcamentariaanual1"/>
-                        <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#categoriaeconomica2"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#CategoriaEconomica"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho7"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#grupodespesa1"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#GrupoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#modalidadeaplicacao2"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ModalidadeAplicacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#outorgantedegasto"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Outorgante_de_Gasto"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadeorcamentaria"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeOrcamentaria"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Acao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#FonteRecurso"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Funcao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Programa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Subfuncao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Subtitulo"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorDotacaoInicial"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
+        <rdfs:label rdf:datatype="&xsd;string">ItemLoa</rdfs:label>
     </owl:Class>
     
 
@@ -1117,23 +1144,23 @@
     <!-- http://ontology.com.br/loa/spec/#ItemPagamento -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ItemPagamento">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ItemPagamento</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">ItemPagamento</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#pagamento2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho3"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#paga"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#SubelementoDespesa"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#subelementodespesa1"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#SubelementoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#refere-se"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1145,22 +1172,22 @@
     <!-- http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LeiOrcamentariaAnual</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">LeiOrcamentariaAnual</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#descreve"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#uniao"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#cria"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Ente_Federativo"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#anoExercicio"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual.anoExercicio"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1172,37 +1199,37 @@
     <!-- http://ontology.com.br/loa/spec/#Liquidacao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Liquidacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liquidacao</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Liquidacao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemliquidacao2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#compostoDe.Liquidacao.ItemLiquidacao"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#ItemLiquidacao"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#credor3"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho4"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#pagamento3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.depende.Pagamento.Liquidacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#depende.Liquidacao.Empenho"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#quita"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#realiza.Liquidacao.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorTotal2"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao.valorTotal"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1214,19 +1241,19 @@
     <!-- http://ontology.com.br/loa/spec/#ModalidadeAplicacao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#ModalidadeAplicacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ModalidadeAplicacao</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">ModalidadeAplicacao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa6"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ModalidadeAplicacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa13"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.ModalidadeAplicacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1246,12 +1273,12 @@
     <!-- http://ontology.com.br/loa/spec/#Orgao -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Orgao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orgao</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Orgao</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadeorganizacional"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#compostoDe.Orgao.Unidade_Organizacional"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Unidade_Organizacional"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1264,14 +1291,14 @@
     <!-- http://ontology.com.br/loa/spec/#Outorgante_de_Gasto -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Outorgante_de_Gasto">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outorgante de Gasto</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Outorgante de Gasto</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa8"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.Outorgante_de_Gasto"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1284,32 +1311,32 @@
     <!-- http://ontology.com.br/loa/spec/#Pagamento -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Pagamento">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pagamento</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Pagamento</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itempagamento2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#compostoDe.Pagamento.ItemPagamento"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#ItemPagamento"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#credor1"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquidacao2"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#depende.Pagamento.Liquidacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#unidadegestora3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#favorece.Pagamento.Credor"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Credor"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#realiza.Pagamento.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#valorTotal3"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#Pagamento.valorTotal"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1329,24 +1356,24 @@
     <!-- http://ontology.com.br/loa/spec/#SubelementoDespesa -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#SubelementoDespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SubelementoDespesa</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">SubelementoDespesa</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemdespesa3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.SubelementoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemliquidacao1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.liquida"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLiquidacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itempagamento1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.paga"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemPagamento"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1358,24 +1385,24 @@
     <!-- http://ontology.com.br/loa/spec/#UnidadeGestora -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#UnidadeGestora">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnidadeGestora</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">UnidadeGestora</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#empenho1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Empenho.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquidacao3"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Liquidacao"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#pagamento4"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Pagamento"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1388,14 +1415,14 @@
     <!-- http://ontology.com.br/loa/spec/#UnidadeOrcamentaria -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#UnidadeOrcamentaria">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnidadeOrcamentaria</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">UnidadeOrcamentaria</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#itemloa1"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.UnidadeOrcamentaria"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLoa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1408,12 +1435,12 @@
     <!-- http://ontology.com.br/loa/spec/#Unidade_Organizacional -->
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Unidade_Organizacional">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidade Organizacional</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Unidade Organizacional</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#orgao"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.compostoDe.Orgao.Unidade_Organizacional"/>
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#Orgao"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1432,15 +1459,86 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Atividade"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#OperacaoEspecial"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Projeto"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.anula"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.Outorgante_de_Gasto"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.ItemLoa.UnidadeOrcamentaria"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Orgao.Unidade_Organizacional"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.cria"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.depende"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.depende.Pagamento.Liquidacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.descreve"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.favorece"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.favorece.Empenho.Credor"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.favorece.Pagamento.Credor"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.CategoriaEconomica"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ElementoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.GrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.ModalidadeAplicacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemDespesa.SubelementoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.liquida"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.paga"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.CategoriaEconomica"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.GrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.ItemLoa.ModalidadeAplicacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.quita"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Empenho.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.refere-se"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.reforca"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#anula"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza.ItemLoa.Outorgante_de_Gasto"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza.ItemLoa.UnidadeOrcamentaria"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Empenho.ItemDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Liquidacao.ItemLiquidacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Orgao.Unidade_Organizacional"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Pagamento.ItemPagamento"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#conformidadeCom"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#cria"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#depende"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#depende.Liquidacao.Empenho"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#depende.Pagamento.Liquidacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#descreve"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#favorece"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#favorece.Empenho.Credor"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#favorece.Pagamento.Credor"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.CategoriaEconomica"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ElementoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.GrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.ModalidadeAplicacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemDespesa.SubelementoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquida"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#paga"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.CategoriaEconomica"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.GrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.ItemLoa.ModalidadeAplicacao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#quita"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza.Empenho.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza.Liquidacao.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza.Pagamento.UnidadeGestora"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#refere-se"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#reforca"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#EmpenhoAnulacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#EmpenhoOriginal"/>
@@ -1448,73 +1546,16 @@
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#categoriaeconomica1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#categoriaeconomica2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#credor1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#credor2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#credor3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#elementodespesa"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho4"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho5"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho6"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenho7"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhoanulacao"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhooriginal"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#empenhoreforco"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#grupodespesa1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#grupodespesa2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa4"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa5"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemdespesa6"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemliquidacao1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemliquidacao2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa10"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa13"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa6"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itemloa8"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itempagamento1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itempagamento2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#itempagamento3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#leiorcamentariaanual1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#leiorcamentariaanual2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquidacao1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquidacao2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquidacao3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquidacao4"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquidacao5"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#modalidadeaplicacao1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#modalidadeaplicacao2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#orgao"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#outorgantedegasto"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#pagamento1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#pagamento2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#pagamento3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#pagamento4"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#subelementodespesa3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#uniao"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadegestora1"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadegestora2"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadegestora3"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadeorcamentaria"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#unidadeorganizacional"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Atividade"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#OperacaoEspecial"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#Projeto"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.4) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
