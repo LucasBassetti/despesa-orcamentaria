@@ -150,3 +150,18 @@ SELECT ?nomeItem ?subelementoLabel (SUM(xsd:double(?valorTotal)) as ?sumValorTot
 GROUP BY (?nomeItem)(?subelementoLabel)
 ORDER BY DESC(?sumValorTotal)
 ```
+
+##### Qual Ação com maior número de empenhos?
+
+``` sql
+SELECT ?acao ?codigo (count(?empenho) as ?nEmpenhos) WHERE {
+  ?empenho a loa:Empenho ;
+ 		loa:conformidadeCom ?itemLoa .
+  ?itemLoa loa:prescreveAcao ?acaoURI .
+  ?acaoURI rdfs:label ?acao ;
+           loa:codigo ?codigo .
+
+}
+GROUP BY ?acao ?codigo
+ORDER BY DESC(?nEmpenhos)
+```
