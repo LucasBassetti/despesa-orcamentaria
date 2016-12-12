@@ -3,7 +3,7 @@ Repositório para o conteúdo sobre autorização e execução da despesa or
 
 Para o estudo de caso, foram utilizados dados sobre execução orçamentária do [Portal de Transparência](http://www.portaltransparencia.gov.br/) com as seguintes características:
 
-* **Período:** 01/01/2016 - 31/01/2016
+* **Período:** 01/01/2016 - 28/02/2016
 * **Órgão Superior:** Ministério da Educação
 * **Órgão / Entidade Vinculada:** Universidade Federal do Espírito Santo
 
@@ -11,8 +11,8 @@ Para o estudo de caso, foram utilizados dados sobre execução orçamentária do
 
 A ontologia encontra-se nos formatos disponíveis nos links abaixo.
 
-* [OntoUML](http://ontology.com.br/loa/spec/)
-* [OWL](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
+* [Ontogia de Referência (OntoUML)](http://ontology.com.br/loa/spec/)
+* [Ontogia Operacional (RDF/OWL)](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
 * [Menthor](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.menthor) ([Link da Ferramenta](http://menthor.net))
 
 ### Questões de Competência
@@ -31,9 +31,14 @@ As questões de competência podem ser testadas no endpoint presente no link aba
 * **Username:** ``` nemo ```
 * **Password:** ``` nemo ```
 
+### Aplicação de Demonstração
+
+* [API](https://github.com/LucasBassetti/despesa-orcamentaria/tree/master/api)
+* [Aplicação](https://github.com/LucasBassetti/despesa-orcamentaria/tree/master/loa-app)
+
 ### Autores
 
 1. [Archimedes A. Detoni](http://www.informatica.ufes.br/pos-graduacao/PPGI/detalhes-de-pessoal?id=9227)
 2. [João Paulo A. Almeida](http://nemo.inf.ufes.br/jpalmeida/)
-3. [Lucas Bassetti R. da Fonseca](http://nemo.inf.ufes.br/members/lfonseca/)
+3. [Lucas Bassetti R. da Fonseca](http://lucasbassetti.com.br)
 4. [Ricardo de Almeida Falbo](http://www.inf.ufes.br/~falbo/)

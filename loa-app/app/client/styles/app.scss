@@ -1,0 +1,71 @@
+$react-blue: #00d8ff;
+$bar-dark-text: $react-blue;
+$dark: #000000;
+$positive: $react-blue;
+
+@import "{}/node_modules/reactionic/dist/scss/styles/reactionic.scss";
+
+.bar-dark .button.button-clear {
+    color: $react-blue;
+}
+
+.stretch {
+    height: 100%;
+    width: 100%;
+}
+
+.platform-ios.platform-cordova {
+  &:not(.fullscreen) {
+    .scroll-content.ios-top-margin {
+        top: $ios-statusbar-height;
+    }
+    .bar-header:not(.bar-subheader) {
+      span > .title {
+          top: $ios-statusbar-height;
+      }
+    }
+  }
+}
+
+.slide-demo {
+    text-align: center;
+    padding-top: 200px;
+}
+.slide-demo.dark {
+    background-color: #444;
+    h3 {
+        color: $react-blue;
+    }
+}
+.slide-demo.blue {
+    background-color: $react-blue;
+    color: #000;
+}
+
+.side-menu {
+    background-color: $stable;
+    color: $dark;
+}
+
+span.name {
+    font-size: 12px;
+}
+
+.subtitle {
+    border: 0;
+    font-size: 14px;
+    text-align: center;
+    white-space: normal;
+}
+
+.badge.badge-corner {
+    background-color: #e2e2e2;
+    color: #656565;
+    top: 0;
+    left: 0;
+    right: initial;
+    font-size: 10px;
+    line-height: 5px;
+    padding: 5px 10px 5px 5px;
+    border-radius: 0 0 50px 0;
+}
