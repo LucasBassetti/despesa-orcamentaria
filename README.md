@@ -31,6 +31,10 @@ As questões de competência podem ser testadas no endpoint presente no link aba
 * **Username:** ``` nemo ```
 * **Password:** ``` nemo ```
 
+### Web Crawler
+
+* [Web Crawler](https://github.com/LucasBassetti/crawler-transparencia)
+
 ### Aplicação de Demonstração
 
 * [API](https://github.com/LucasBassetti/despesa-orcamentaria/tree/master/api)
