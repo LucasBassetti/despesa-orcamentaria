@@ -1,8 +1,34 @@
-### QC1. Que ente federativo cria uma LOA e, portanto, concede autorizações de despesa nos orçamentos descritos por essa LOA?
+### QC1. Que ente federativo cria uma LOA e, portanto, concede autorizações de despesa nos orçamentos descritos por essa LOA? *
+
+``` sql
+SELECT ?enteFederativo WHERE {
+  ?enteFederativoURI loa:cria ?LOA .
+  ?LOA rdf:type loa:LeiOrcamentariaAnual .
+  ?enteFederativoURI rdfs:label ?enteFederativo
+}
+```
 
 ### QC2. Que tipos de orçamentos podem ser descritos em uma LOA?
 
-### QC3. Quais despesas uma organização pública está autorizada a realizar de acordo com a LOA?
+``` sql
+SELECT ?orcamento WHERE {
+  ?orcamento rdfs:subClassOf loa:Orcamento
+}
+```
+
+### QC3. Quais despesas uma organização pública está autorizada a realizar de acordo com a LOA? *
+
+``` sql
+SELECT DISTINCT ?unidadeOrcamentariaURI ?categoriaEconomica ?grupoDespesa ?modalidadeAplicacao
+WHERE {
+    ?unidadeOrcamentariaURI rdf:type loa:UnidadeOrcamentaria ;
+                         	rdfs:label ?unidadeOrcamentaria ;
+    					 	loa:autorizadaAExecutarDespesaPor ?autorizacaoDespesa .
+    ?autorizacaoDespesa loa:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;
+                        loa:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;
+                        loa:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao .
+}
+```
 
 ### QC4. Quais classificadores estão prescritos por uma determinada autorização da despesa?
 
@@ -174,7 +200,16 @@ SELECT DISTINCT ?credor WHERE {
 }
 ```
 
-### QC14. Como um material prescrito em um determinado item de empenho é classificado?
+### QC14. Como um material prescrito em um determinado item de empenho é classificado? *
+
+Exemplo URI Item de Empenho: `http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969`
+
+``` sql
+SELECT ?classificador WHERE {
+  <http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969> loa:descreve ?material .
+  ?material rdf:type/rdfs:label ?classificador .
+}
+```
 
 ### QC15. Qual é a unidade gestora e o credor de uma liquidação?
 
@@ -209,7 +244,16 @@ SELECT ?empenho WHERE {
 }
 ```
 
-### QC18. Quais os materiais liquidados por um item de liquidação?
+### QC18. Quais os materiais liquidados por um item de liquidação? *
+
+Exemplo URI Liquidação: `http://ontology.com.br/loa/resource/liquidacao/2016/153048152252016NS000043`
+
+``` sql
+SELECT ?materialLiquidado WHERE {
+  <http://ontology.com.br/loa/resource/liquidacao/2016/153048152252016NS000043> loa:compostoDe ?itemLiquidacao .
+  ?itemLiquidacao loa:liquida ?materialLiquidado .
+}
+```
 
 ### QC19. Quais liquidações foram feitas tendo como base uma determinada autorização de despesa da LOA?
 
