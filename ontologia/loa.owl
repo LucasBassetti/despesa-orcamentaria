@@ -32,22 +32,6 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.Outorgante_de_Gasto -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.Outorgante_de_Gasto">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.UnidadeOrcamentaria -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.UnidadeOrcamentaria">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontology.com.br/loa/spec/#INV.compostoDe -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
@@ -78,9 +62,9 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#INV.conformidadeCom -->
+    <!-- http://ontology.com.br/loa/spec/#INV.concede -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.concede"/>
     
 
 
@@ -182,39 +166,15 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#INV.prescreve -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.CategoriaEconomica -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.CategoriaEconomica">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.GrupoDespesa -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.GrupoDespesa">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.ModalidadeAplicacao -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.ModalidadeAplicacao">
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontology.com.br/loa/spec/#INV.prescreveAcao -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveAcao"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreveCategoriaEconomica -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveCategoriaEconomica"/>
     
 
 
@@ -239,6 +199,18 @@
     <!-- http://ontology.com.br/loa/spec/#INV.prescreveFuncao -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveFuncao"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreveGrupoDespesa -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveGrupoDespesa"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.prescreveModalidadeAplicacao -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveModalidadeAplicacao"/>
     
 
 
@@ -314,6 +286,28 @@
     
 
 
+    <!-- http://ontology.com.br/loa/spec/#INV.refereSe -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe"/>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.refereSe.Empenho.AutorizacaoDespesa -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe.Empenho.AutorizacaoDespesa">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#INV.refereSe.ItemLiquidacao.Empenho -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe.ItemLiquidacao.Empenho">
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.com.br/loa/spec/#INV.reforca -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#INV.reforca"/>
@@ -332,27 +326,8 @@
     <!-- http://ontology.com.br/loa/spec/#autoriza -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.autoriza</rdfs:label>
         <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.Outorgante_de_Gasto -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.Outorgante_de_Gasto">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.autoriza</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.Outorgante_de_Gasto"/>
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#autoriza"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.UnidadeOrcamentaria -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.UnidadeOrcamentaria">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.autoriza</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.UnidadeOrcamentaria"/>
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#autoriza"/>
     </owl:ObjectProperty>
     
 
@@ -395,11 +370,11 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#conformidadeCom -->
+    <!-- http://ontology.com.br/loa/spec/#concede -->
 
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#conformidadeCom">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empenho.conformidadeCom</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#concede">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.concede</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.concede"/>
     </owl:ObjectProperty>
     
 
@@ -534,49 +509,20 @@
     
 
 
-    <!-- http://ontology.com.br/loa/spec/#prescreve -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve">
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.CategoriaEconomica -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.CategoriaEconomica">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreve</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.CategoriaEconomica"/>
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.GrupoDespesa -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.GrupoDespesa">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreve</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.GrupoDespesa"/>
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.ModalidadeAplicacao -->
-
-    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.ModalidadeAplicacao">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreve</rdfs:label>
-        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.ModalidadeAplicacao"/>
-        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#prescreve"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontology.com.br/loa/spec/#prescreveAcao -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreveAcao">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreveAcao</rdfs:label>
         <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveAcao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#prescreveCategoriaEconomica -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreveCategoriaEconomica">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreveCategoriaEconomica</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveCategoriaEconomica"/>
     </owl:ObjectProperty>
     
 
@@ -613,6 +559,24 @@
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreveFuncao">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreveFuncao</rdfs:label>
         <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveFuncao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#prescreveGrupoDespesa -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreveGrupoDespesa">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreveGrupoDespesa</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveGrupoDespesa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#prescreveModalidadeAplicacao -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#prescreveModalidadeAplicacao">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.prescreveModalidadeAplicacao</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveModalidadeAplicacao"/>
     </owl:ObjectProperty>
     
 
@@ -718,6 +682,34 @@
     
 
 
+    <!-- http://ontology.com.br/loa/spec/#refereSe -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#refereSe">
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#refereSe.Empenho.AutorizacaoDespesa -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#refereSe.Empenho.AutorizacaoDespesa">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empenho.refereSe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe.Empenho.AutorizacaoDespesa"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#refereSe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#refereSe.ItemLiquidacao.Empenho -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#refereSe.ItemLiquidacao.Empenho">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ItemLiquidacao.refereSe</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe.ItemLiquidacao.Empenho"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.com.br/loa/spec/#refereSe"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ontology.com.br/loa/spec/#reforca -->
 
     <owl:ObjectProperty rdf:about="http://ontology.com.br/loa/spec/#reforca">
@@ -742,6 +734,24 @@
 
     <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorDotacaoInicial">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.valorDotacaoInicial</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorLeiMaisCredito -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorLeiMaisCredito">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.valorLeiMaisCredito</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorProjetoLei -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorProjetoLei">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AutorizacaoDespesa.valorProjetoLei</rdfs:label>
         <rdfs:domain rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
     </owl:DatatypeProperty>
     
@@ -877,38 +887,23 @@
                         <owl:someValuesFrom rdf:resource="http://ontology.com.br/loa/spec/#LeiOrcamentariaAnual"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe.Empenho.AutorizacaoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.Outorgante_de_Gasto"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Outorgante_de_Gasto"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.UnidadeOrcamentaria"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#autoriza"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeOrcamentaria"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.CategoriaEconomica"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#CategoriaEconomica"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.GrupoDespesa"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#GrupoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.ModalidadeAplicacao"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ModalidadeAplicacao"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreveAcao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Acao"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreveCategoriaEconomica"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#CategoriaEconomica"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -924,6 +919,16 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreveFuncao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Funcao"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreveGrupoDespesa"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#GrupoDespesa"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#prescreveModalidadeAplicacao"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ModalidadeAplicacao"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -950,6 +955,14 @@
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorDotacaoInicial"/>
                         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorLeiMaisCredito"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa.valorProjetoLei"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -970,7 +983,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.CategoriaEconomica"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveCategoriaEconomica"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1063,8 +1076,8 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#conformidadeCom"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.refereSe.ItemLiquidacao.Empenho"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#ItemLiquidacao"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -1080,6 +1093,11 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#realiza.Empenho.UnidadeGestora"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#UnidadeGestora"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#refereSe.Empenho.AutorizacaoDespesa"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -1242,7 +1260,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.GrupoDespesa"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveGrupoDespesa"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1321,6 +1339,11 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#liquida"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#SubelementoDespesa"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#refereSe.ItemLiquidacao.Empenho"/>
+                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#Empenho"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1440,7 +1463,7 @@
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.ModalidadeAplicacao"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.prescreveModalidadeAplicacao"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1464,26 +1487,6 @@
 
     <owl:Class rdf:about="http://ontology.com.br/loa/spec/#OrganizacaoPublica">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrganizacaoPublica</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ontology.com.br/loa/spec/#Outorgante_de_Gasto -->
-
-    <owl:Class rdf:about="http://ontology.com.br/loa/spec/#Outorgante_de_Gasto">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outorgante de Gasto</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.Outorgante_de_Gasto"/>
-                        <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://ontology.com.br/loa/spec/#Ente_Federativo"/>
     </owl:Class>
     
 
@@ -1684,7 +1687,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.UnidadeOrcamentaria"/>
+                        <owl:onProperty rdf:resource="http://ontology.com.br/loa/spec/#INV.autoriza"/>
                         <owl:onClass rdf:resource="http://ontology.com.br/loa/spec/#AutorizacaoDespesa"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                     </owl:Restriction>
@@ -1733,13 +1736,11 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.anula"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.Outorgante_de_Gasto"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.autoriza.AutorizacaoDespesa.UnidadeOrcamentaria"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Empenho.ItemEmpenho"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Liquidacao.ItemLiquidacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.compostoDe.Pagamento.ItemPagamento"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.conformidadeCom"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.concede"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.cria"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.depende"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.depende.Liquidacao.Empenho"/>
@@ -1754,15 +1755,14 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.instancia.ItemEmpenho.ModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.liquida"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.paga"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.CategoriaEconomica"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.GrupoDespesa"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreve.AutorizacaoDespesa.ModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveAcao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveCategoriaEconomica"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveElementoDespesa"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveEsfera"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveFonteRecurso"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveFuncao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveGrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescrevePlanoOrcamentario"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescrevePrograma"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.prescreveSubelementoDespesa"/>
@@ -1774,16 +1774,17 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Liquidacao.UnidadeGestora"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.realiza.Pagamento.UnidadeGestora"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.refere-se"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe.Empenho.AutorizacaoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.refereSe.ItemLiquidacao.Empenho"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#INV.reforca"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#anula"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.Outorgante_de_Gasto"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#autoriza.AutorizacaoDespesa.UnidadeOrcamentaria"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Empenho.ItemEmpenho"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Liquidacao.ItemLiquidacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#compostoDe.Pagamento.ItemPagamento"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#conformidadeCom"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#concede"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#cria"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#depende"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#depende.Liquidacao.Empenho"/>
@@ -1798,15 +1799,14 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#instancia.ItemEmpenho.ModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#liquida"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#paga"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.CategoriaEconomica"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.GrupoDespesa"/>
-            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreve.AutorizacaoDespesa.ModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveAcao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveCategoriaEconomica"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveElementoDespesa"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveEsfera"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveFonteRecurso"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveFuncao"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveGrupoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveModalidadeAplicacao"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescrevePlanoOrcamentario"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescrevePrograma"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#prescreveSubelementoDespesa"/>
@@ -1818,6 +1818,9 @@
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza.Liquidacao.UnidadeGestora"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#realiza.Pagamento.UnidadeGestora"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#refere-se"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#refereSe"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#refereSe.Empenho.AutorizacaoDespesa"/>
+            <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#refereSe.ItemLiquidacao.Empenho"/>
             <rdf:Description rdf:about="http://ontology.com.br/loa/spec/#reforca"/>
         </owl:members>
     </rdf:Description>

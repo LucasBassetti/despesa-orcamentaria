@@ -1,22 +1,4 @@
-### QC1. Que ente federativo cria uma LOA e, portanto, concede autorizações de despesa nos orçamentos descritos por essa LOA? *
-
-``` sql
-SELECT ?enteFederativo WHERE {
-  ?enteFederativoURI loa:cria ?LOA .
-  ?LOA rdf:type loa:LeiOrcamentariaAnual .
-  ?enteFederativoURI rdfs:label ?enteFederativo
-}
-```
-
-### QC2. Que tipos de orçamentos podem ser descritos em uma LOA?
-
-``` sql
-SELECT ?orcamento WHERE {
-  ?orcamento rdfs:subClassOf loa:Orcamento
-}
-```
-
-### QC3. Quais despesas uma organização pública está autorizada a realizar de acordo com a LOA? *
+### QC1. Quais despesas uma organização pública está autorizada a realizar de acordo com a LOA?
 
 ``` sql
 SELECT DISTINCT ?unidadeOrcamentariaURI ?categoriaEconomica ?grupoDespesa ?modalidadeAplicacao
@@ -30,7 +12,7 @@ WHERE {
 }
 ```
 
-### QC4. Quais classificadores estão prescritos por uma determinada autorização da despesa?
+### QC2. Quais classificadores estão prescritos por uma determinada autorização de despesa?
 
 Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
 
@@ -49,14 +31,32 @@ WHERE {
 }
 ```
 
-### QC5. Quais empenhos foram feitos tendo como base uma determinada autorização de despesa da LOA?
+### QC3. Que ente federativo cria uma LOA e, portanto, concede autorizações de despesa nos orçamentos descritos por essa LOA?
+
+``` sql
+SELECT ?enteFederativo WHERE {
+  ?enteFederativoURI loa:cria ?LOA .
+  ?LOA rdf:type loa:LeiOrcamentariaAnual .
+  ?enteFederativoURI rdfs:label ?enteFederativo
+}
+```
+
+### QC4. Que tipos de orçamentos podem ser descritos em uma LOA?
+
+``` sql
+SELECT ?orcamento WHERE {
+  ?orcamento rdfs:subClassOf loa:Orcamento
+}
+```
+
+### QC5. Quais empenhos foram feitos tendo como base uma determinada autorização de despesa?
 
 Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
 
 ``` sql
 SELECT ?empenho ?urlPortal WHERE {
     ?empenho rdf:type loa:Empenho .
-	?empenho loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
+	?empenho loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
     ?empenho owl:sameAs ?urlPortal .
 }
 ```
@@ -74,7 +74,7 @@ SELECT ?credor ?unidadeGestora WHERE {
 }
 ```
 
-### QC7. Quais os itens empenhados em um empenho e as quantidades e valores associados a esses itens?
+### QC7. Quais os itens relativos a materiais empenhados em um empenho e as quantidades e valores associados a esses itens?
 
 Exemplo URI Empenho: `http://ontology.com.br/loa/resource/empenho/2016/153048152252016NE800027`
 
@@ -87,14 +87,25 @@ SELECT ?itemEmpenho ?valorTotal ?quantidade WHERE {
 }
 ```
 
-### QC8. Quais classificadores estão prescritos por um determinado empenho e seus itens?
+### QC8. Como é classificado um material descrito em um determinado item de empenho? *
+
+Exemplo URI Item de Empenho: `http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969`
+
+``` sql
+SELECT ?classificador WHERE {
+  <http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969> loa:descreve ?material .
+  ?material rdf:type/rdfs:label ?classificador .
+}
+```
+
+### QC9. Quais são os classificadores dos itens que compõem um determinado empenho?
 
 Exemplo URI Empenho: `http://ontology.com.br/loa/resource/empenho/2016/153048152252016NE800027`
 
 ``` sql
 SELECT DISTINCT ?autorizacaoDespesa ?categoriaEconomica ?grupoDespesa ?modalidadeAplicacao ?esfera ?programa ?acao ?subtitulo ?funcao ?subfuncao
 WHERE {
-    <http://ontology.com.br/loa/resource/empenho/2016/153048152252016NE800027> loa:conformidadeCom ?autorizacaoDespesa .
+    <http://ontology.com.br/loa/resource/empenho/2016/153048152252016NE800027> loa:refereSe ?autorizacaoDespesa .
     ?autorizacaoDespesa loa:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;
                         loa:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;
                         loa:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao ;
@@ -107,7 +118,33 @@ WHERE {
 }
 ```
 
-### QC9. Quanto foi empenhado a determinado credor?
+### QC10. Quais unidades gestoras empenharam recursos de uma determinada autorização da despesa?
+
+Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
+
+``` sql
+SELECT DISTINCT ?unidadeGestora WHERE {
+  ?unidadeGestoraURI loa:realiza ?empenho ;
+  				  	 rdfs:label ?unidadeGestora .
+  ?empenho a loa:Empenho ;
+           loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
+}
+```
+
+### QC11. Quais credores foram favorecidos com empenhos relacionados a uma determinada autorização de despesa?
+
+Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
+
+``` sql
+SELECT DISTINCT ?credor WHERE {
+  ?empenho a loa:Empenho ;
+           loa:favorece ?credorURI ;
+           loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
+  ?credorURI rdfs:label ?credor .
+}
+```
+
+### QC12. Em um exercício fiscal, Quanto foi empenhado a determinado credor?
 
 Exemplo URI Credor: `http://ontology.com.br/loa/resource/credor/1530461522`
 
@@ -128,13 +165,13 @@ SELECT ((SUM(xsd:double(?valorTotal)) - SUM(xsd:double(?valorTotalAnulacao))) as
 }
 ```
 
-### QC10. Qual valor empenhado para determinado classificador de despesa?
+### QC13. Em um exercício fiscal, Qual valor empenhado para determinado classificador de despesa?
 
 ``` sql
 SELECT ?programa ((SUM(xsd:double(?valorTotal)) - SUM(xsd:double(?valorTotalAnulacao))) as ?valorEmpenhado) WHERE {
   	{
       ?empenho a loa:Empenho ;
-             loa:conformidadeCom ?autorizacaoDespesa ;
+             loa:refereSe ?autorizacaoDespesa ;
              loa:valorTotal ?valorTotal .
       ?autorizacaoDespesa loa:prescrevePrograma/rdfs:label ?programa .
       MINUS {
@@ -142,7 +179,7 @@ SELECT ?programa ((SUM(xsd:double(?valorTotal)) - SUM(xsd:double(?valorTotalAnul
       }
     } UNION {
       ?empenho a loa:EmpenhoAnulacao ;
-             loa:conformidadeCom ?autorizacaoDespesa ;
+             loa:refereSe ?autorizacaoDespesa ;
              loa:valorTotal ?valorTotalAnulacao .
       ?autorizacaoDespesa loa:prescrevePrograma/rdfs:label ?programa .
     }
@@ -151,20 +188,7 @@ GROUP BY ?programa
 ORDER BY DESC(?valorEmpenhado)
 ```
 
-### QC11. Quais unidades gestoras empenharam recursos de uma determinada autorização da despesa?
-
-Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
-
-``` sql
-SELECT DISTINCT ?unidadeGestora WHERE {
-  ?unidadeGestoraURI loa:realiza ?empenho ;
-  				  	 rdfs:label ?unidadeGestora .
-  ?empenho a loa:Empenho ;
-           loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
-}
-```
-
-### QC12. Qual unidade gestora teve maior volume de recursos empenhados?
+### QC14. Em um exercício fiscal, qual o valor empenhado por uma unidade gestora?
 
 ``` sql
 SELECT ?unidadeGestora ((SUM(xsd:double(?valorTotal)) - SUM(xsd:double(?valorTotalAnulacao))) as ?valorEmpenhado) WHERE {
@@ -185,30 +209,6 @@ SELECT ?unidadeGestora ((SUM(xsd:double(?valorTotal)) - SUM(xsd:double(?valorTot
 }
 GROUP BY ?unidadeGestora
 ORDER BY DESC(?valorEmpenhado)
-```
-
-### QC13. Quais credores foram favorecidos por determinada autorização da despesa?
-
-Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490`
-
-``` sql
-SELECT DISTINCT ?credor WHERE {
-  ?empenho a loa:Empenho ;
-           loa:favorece ?credorURI ;
-           loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020RK0032123641200004490> .
-  ?credorURI rdfs:label ?credor .
-}
-```
-
-### QC14. Como um material prescrito em um determinado item de empenho é classificado? *
-
-Exemplo URI Item de Empenho: `http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969`
-
-``` sql
-SELECT ?classificador WHERE {
-  <http://ontology.com.br/loa/resource/item-empenho/2016/30/7/153048152252016NE800027/7837969> loa:descreve ?material .
-  ?material rdf:type/rdfs:label ?classificador .
-}
 ```
 
 ### QC15. Qual é a unidade gestora e o credor de uma liquidação?
@@ -234,7 +234,7 @@ SELECT ?itemLiquidacao ?valorTotal WHERE {
 }
 ```
 
-### QC17. A quais empenhos uma liquidação e seus itens se referem?
+### QC17. A quais empenhos se referem uma liquidação e seus itens?
 
 Exemplo URI Liquidação: `http://ontology.com.br/loa/resource/liquidacao/2016/153048152252016NS000043`
 
@@ -255,7 +255,7 @@ SELECT ?materialLiquidado WHERE {
 }
 ```
 
-### QC19. Quais liquidações foram feitas tendo como base uma determinada autorização de despesa da LOA?
+### QC19. Quais liquidações foram feitas tendo como base uma determinada autorização de despesa?
 
 Exemplo URI Autorização: `http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390`
 
@@ -265,11 +265,11 @@ SELECT ?liquidacao ?urlPortal WHERE {
               loa:depende ?empenho ;
               owl:sameAs ?urlPortal .
     ?empenho rdf:type loa:Empenho ;
-			 loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
+			 loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
 }
 ```
 
-### QC20. Quanto foi liquidado a um determinado credor?
+### QC20. Em um exercício fiscal, quanto foi liquidado a um determinado credor?
 
 Exemplo URI Credor: `http://ontology.com.br/loa/resource/credor/1530461522`
 
@@ -282,7 +282,7 @@ SELECT (SUM(xsd:double(?valorTotal)) as ?valorLiquidado) WHERE {
 }
 ```
 
-### QC21. Qual valor liquidado para determinado classificador de despesa?
+### QC21. Em um exercício fiscal, qual valor liquidado para determinado classificador de despesa?
 
 Exemplo: Categoria Econômica
 
@@ -292,13 +292,13 @@ SELECT ?categoriaEconomica (SUM(xsd:double(?valorTotal)) as ?valorLiquidado) WHE
               loa:depende ?empenho ;
               loa:compostoDe ?itemLiquidacao .
   ?itemLiquidacao loa:valorTotal ?valorTotal .
-  ?empenho loa:conformidadeCom ?autorizacaoDespesa .
+  ?empenho loa:refereSe ?autorizacaoDespesa .
   ?autorizacaoDespesa loa:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica .
 }
 GROUP BY ?categoriaEconomica
 ```
 
-### QC22. Qual unidade gestora teve maior volume de recursos liquidados?
+### QC22. Em um exercício fiscal, quanto foi liquidado de determinada unidade gestora?
 
 ``` sql
 SELECT ?unidadeGestora (SUM(xsd:double(?valorTotal)) as ?valorLiquidado) WHERE {
@@ -324,7 +324,7 @@ SELECT ?unidadeGestora ?credor WHERE {
 }
 ```
 
-### QC24. A quais liquidações um pagamento se refere?
+### QC24. De quais liquidações um pagamento depende?
 
 Exemplo URI Pagamento: `http://ontology.com.br/loa/resource/pagamento/2016/153048152252016OB800118`
 
@@ -357,7 +357,7 @@ SELECT ?pagamento ?urlPortal WHERE {
                loa:depende ?empenho ;
                owl:sameAs ?urlPortal .
     ?empenho rdf:type loa:Empenho ;
-			 loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
+			 loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
 }
 ```
 
@@ -372,12 +372,12 @@ SELECT (SUM(xsd:double(?valorTotalAD)) as ?valorAD) (SUM(xsd:double(?valorTotalP
                loa:valorTotal ?valorTotalPago ;
                owl:sameAs ?urlPortal .
     ?empenho rdf:type loa:Empenho ;
-			 loa:conformidadeCom <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
+			 loa:refereSe <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> .
     <http://ontology.com.br/loa/resource/autorizacao-despesa/2016/20161208020GK0032123645000003390> loa:valorDotacaoInicial ?valorTotalAD .
 }
 ```
 
-### QC28. Quanto foi pago a determinado credor?
+### QC28. Em um exercício fiscal, quanto foi pago a determinado credor?
 
 Exemplo URI Credor: `http://ontology.com.br/loa/resource/credor/1530461522`
 
@@ -389,7 +389,7 @@ SELECT (SUM(xsd:double(?valorTotal)) as ?valorPago) WHERE {
 }
 ```
 
-### QC29. Qual unidade gestora teve maior volume de recursos pagos?
+### QC29. Em um exercício fiscal, quanto foi pago por determinada unidade gestora?
 
 ``` sql
 SELECT ?unidadeGestora (SUM(xsd:double(?valorTotal)) as ?valorPago) WHERE {
@@ -403,7 +403,7 @@ GROUP BY ?unidadeGestora
 ORDER BY DESC(?valorPago)
 ```
 
-### QC30. Qual valor pago para determinado classificador da despesa?
+### QC30. Em um exercício fiscal, qual valor pago para determinado classificador da despesa?
 
 Exemplo: Categoria Econômica
 
@@ -412,7 +412,7 @@ SELECT ?categoriaEconomica (SUM(xsd:double(?valorTotal)) as ?valorPago) WHERE {
   ?pagamento a loa:Pagamento ;
              loa:depende ?empenho ;
              loa:valorTotal ?valorTotal .
-  ?empenho loa:conformidadeCom ?autorizacaoDespesa .
+  ?empenho loa:refereSe ?autorizacaoDespesa .
   ?autorizacaoDespesa loa:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica .
 }
 GROUP BY ?categoriaEconomica
