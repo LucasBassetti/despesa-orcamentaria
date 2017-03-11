@@ -1,5 +1,5 @@
 # Despesa Orçamentária
-Repositório para o conteúdo sobre autorização e execução da despesa orçamentária brasileira.
+Repositório para o conteúdo sobre a ontologia de autorização e execução da despesa orçamentária brasileira (ODP).
 
 Para o estudo de caso, foram utilizados dados sobre execução orçamentária do [Portal de Transparência](http://www.portaltransparencia.gov.br/) com as seguintes características:
 
@@ -11,9 +11,9 @@ Para o estudo de caso, foram utilizados dados sobre execução orçamentária do
 
 A ontologia encontra-se nos formatos disponíveis nos links abaixo.
 
-* [Ontogia de Referência (OntoUML)](http://ontology.com.br/loa/spec/)
-* [Ontogia Operacional (RDF/OWL)](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.owl)
-* [Menthor](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/loa.menthor) ([Link da Ferramenta](http://menthor.net))
+* [Ontogia de Referência ODP (em OntoUML)](http://ontology.com.br/odp/spec/)
+* [Ontogia Operacional (RDF/OWL)](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/odp.owl)
+* [Menthor](https://github.com/LucasBassetti/despesa-orcamentaria/blob/master/ontologia/odp.menthor) ([Link da Ferramenta](http://menthor.net))
 
 ### Questões de Competência
 
@@ -27,9 +27,9 @@ Questões de competência foram implementadas em consultas SPARQL dando origem a
 
 As questões de competência podem ser testadas no endpoint presente no link abaixo.
 
-* [SPARQL Endpoint](http://dev.nemo.inf.ufes.br:5820/dpf#!/query)
-* **Username:** ``` nemo ```
-* **Password:** ``` nemo ```
+* [SPARQL Endpoint](http://dev.nemo.inf.ufes.br:5820/odp#!/query)
+* **Username:** `nemo`
+* **Password:** `nemo`
 
 ### Web Crawler
 
