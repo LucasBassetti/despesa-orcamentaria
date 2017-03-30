@@ -3,10 +3,11 @@
 ``` sql
 SELECT DISTINCT
   ?unidadeOrcamentariaURI
+  ?unidadeOrcamentaria
 WHERE {     
-  ?unidadeOrcamentariaURI rdf:type odp:UnidadeOrcamentaria ;
+  ?unidadeOrcamentariaURI rdf:type ordp:UnidadeOrcamentaria ;
     rdfs:label ?unidadeOrcamentaria ;
-    odp:autorizadaAExecutarDespesaPor ?autorizacaoDespesa .
+    ordp:autorizadaAExecutarDespesaPor ?autorizacaoDespesa .
 }
 ```
 
@@ -25,15 +26,15 @@ SELECT DISTINCT
   ?funcao
   ?subfuncao
 WHERE {     
-  ?autorizacaoDespesa odp:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;  
-    odp:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;
-    odp:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao ;
-    odp:prescreveEsfera/rdfs:label ?esfera ;
-    odp:prescrevePrograma/rdfs:label ?programa ;
-    odp:prescreveAcao/rdfs:label ?acao ;
-    odp:prescreveSubtitulo/rdfs:label ?subtitulo ;
-    odp:prescreveFuncao/rdfs:label ?funcao ;
-    odp:prescreveSubfuncao/rdfs:label ?subfuncao .
+  ?autorizacaoDespesa ordp:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;  
+    ordp:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;
+    ordp:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao ;
+    ordp:prescreveEsfera/rdfs:label ?esfera ;
+    ordp:prescrevePrograma/rdfs:label ?programa ;
+    ordp:prescreveAcao/rdfs:label ?acao ;
+    ordp:prescreveSubtitulo/rdfs:label ?subtitulo ;
+    ordp:prescreveFuncao/rdfs:label ?funcao ;
+    ordp:prescreveSubfuncao/rdfs:label ?subfuncao .
 }
 ```
 
@@ -41,8 +42,8 @@ WHERE {
 
 ``` sql
 SELECT ?enteFederativo WHERE {   
-  ?enteFederativoURI odp:cria ?LOA .   
-  ?LOA rdf:type odp:LeiOrcamentariaAnual .   
+  ?enteFederativoURI ordp:cria ?LOA .   
+  ?LOA rdf:type ordp:LeiOrcamentariaAnual .   
   ?enteFederativoURI rdfs:label ?enteFederativo
 }
 ```
@@ -55,8 +56,8 @@ SELECT
   ?autorizacaoDespesa
   ?urlPortal
 WHERE {     
-  ?empenho rdf:type odp:Empenho .
-  ?empenho odp:refereSe ?autorizacaoDespesa .     
+  ?empenho rdf:type ordp:Empenho .
+  ?empenho ordp:refereSe ?autorizacaoDespesa .     
   ?empenho owl:sameAs ?urlPortal .
 }
 
@@ -70,9 +71,9 @@ SELECT
   ?credor
   ?unidadeGestora
 WHERE {         
-  ?empenho odp:favorece ?credorURI .
+  ?empenho ordp:favorece ?credorURI .
   ?credorURI rdfs:label ?credor .
-  ?unidadeGestoraURI odp:realiza ?empenho ;
+  ?unidadeGestoraURI ordp:realiza ?empenho ;
     rdfs:label ?unidadeGestora .
 }
 ```
@@ -86,9 +87,9 @@ SELECT
   ?valorTotal
   ?quantidade
 WHERE {
-  ?empenho odp:compostoDe ?itemEmpenho .
-  ?itemEmpenho odp:valorTotal ?valorTotal ;   
-  odp:quantidade ?quantidade .  
+  ?empenho ordp:compostoDe ?itemEmpenho .
+  ?itemEmpenho ordp:valorTotal ?valorTotal ;   
+  ordp:quantidade ?quantidade .  
 }
 ```
 
@@ -107,16 +108,16 @@ SELECT DISTINCT
   ?funcao
   ?subfuncao
 WHERE {
-  ?empenho odp:refereSe ?autorizacaoDespesa .     
-  ?autorizacaoDespesa odp:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;                         
-    odp:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;   
-    odp:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao ;
-    odp:prescreveEsfera/rdfs:label ?esfera ;
-    odp:prescrevePrograma/rdfs:label ?programa ;
-    odp:prescreveAcao/rdfs:label ?acao ;   
-    odp:prescreveSubtitulo/rdfs:label ?subtitulo ;
-    odp:prescreveFuncao/rdfs:label ?funcao ;  
-    odp:prescreveSubfuncao/rdfs:label ?subfuncao .
+  ?empenho ordp:refereSe ?autorizacaoDespesa .     
+  ?autorizacaoDespesa ordp:prescreveCategoriaEconomica/rdfs:label ?categoriaEconomica ;                         
+    ordp:prescreveGrupoDespesa/rdfs:label ?grupoDespesa ;   
+    ordp:prescreveModalidadeAplicacao/rdfs:label ?modalidadeAplicacao ;
+    ordp:prescreveEsfera/rdfs:label ?esfera ;
+    ordp:prescrevePrograma/rdfs:label ?programa ;
+    ordp:prescreveAcao/rdfs:label ?acao ;   
+    ordp:prescreveSubtitulo/rdfs:label ?subtitulo ;
+    ordp:prescreveFuncao/rdfs:label ?funcao ;  
+    ordp:prescreveSubfuncao/rdfs:label ?subfuncao .
 }
 ```
 
@@ -127,10 +128,10 @@ SELECT DISTINCT
   ?unidadeGestora
   ?autorizacaoDespesa
 WHERE {   
-  ?unidadeGestoraURI odp:realiza ?empenho ;
+  ?unidadeGestoraURI ordp:realiza ?empenho ;
     rdfs:label ?unidadeGestora .   
-  ?empenho a odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa .
+  ?empenho a ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa .
 }
 ```
 
@@ -141,9 +142,9 @@ SELECT DISTINCT
   ?credor
   ?autorizacaoDespesa
 WHERE {   
-  ?empenho a odp:Empenho ;
-    odp:favorece ?credorURI ;            
-    odp:refereSe ?autorizacaoDespesa .   
+  ?empenho a ordp:Empenho ;
+    ordp:favorece ?credorURI ;            
+    ordp:refereSe ?autorizacaoDespesa .   
   ?credorURI rdfs:label ?credor .
 }
 ```
@@ -155,9 +156,9 @@ SELECT DISTINCT
   ?credor
   ?autorizacaoDespesa
 WHERE {   
-  ?empenho a odp:Empenho ;
-    odp:favorece ?credorURI ;            
-    odp:refereSe ?autorizacaoDespesa .   
+  ?empenho a ordp:Empenho ;
+    ordp:favorece ?credorURI ;            
+    ordp:refereSe ?autorizacaoDespesa .   
   ?credorURI rdfs:label ?credor .
 }
 ```
@@ -169,10 +170,10 @@ SELECT
   ?programa
   (SUM(xsd:double(?valorTotal)) as ?valorEmpenhado)
 WHERE {     
-  ?empenho a odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa ;
-    odp:valorTotal ?valorTotal .
-  ?autorizacaoDespesa odp:prescrevePrograma/rdfs:label ?programa .
+  ?empenho a ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa ;
+    ordp:valorTotal ?valorTotal .
+  ?autorizacaoDespesa ordp:prescrevePrograma/rdfs:label ?programa .
 }
 GROUP BY ?programa ORDER BY DESC(?valorEmpenhado)
 ```
@@ -184,10 +185,10 @@ SELECT
   ?unidadeGestora
   (SUM(xsd:double(?valorTotal)) as ?valorEmpenhado)
 WHERE {     
-  ?unidadeGestoraURI odp:realiza ?empenho ;
+  ?unidadeGestoraURI ordp:realiza ?empenho ;
     rdfs:label ?unidadeGestora .
-  ?empenho a odp:Empenho ;
-    odp:valorTotal ?valorTotal .       
+  ?empenho a ordp:Empenho ;
+    ordp:valorTotal ?valorTotal .       
 }
 GROUP BY ?unidadeGestora ORDER BY DESC(?valorEmpenhado)
 ```
@@ -200,8 +201,8 @@ SELECT
   ?credor
   ?unidadeGestora
 WHERE {   
-  ?liquidacao odp:quita/rdfs:label ?credor .   
-  ?unidadeGestoraURI odp:realiza ?liquidacao ;
+  ?liquidacao ordp:quita/rdfs:label ?credor .   
+  ?unidadeGestoraURI ordp:realiza ?liquidacao ;
     rdfs:label ?unidadeGestora .
 }
 ```
@@ -214,8 +215,8 @@ SELECT
   ?itemLiquidacao
   ?valorTotal
 WHERE {   
-  ?liquidacao odp:compostoDe ?itemLiquidacao .   
-  ?itemLiquidacao odp:valorTotal ?valorTotal .
+  ?liquidacao ordp:compostoDe ?itemLiquidacao .   
+  ?itemLiquidacao ordp:valorTotal ?valorTotal .
 }
 ```
 
@@ -227,8 +228,8 @@ SELECT
   ?itemLiquidacao
   ?empenho
 WHERE {   
-  ?liquidacao odp:depende ?empenho ;
-    odp:compostoDe ?itemLiquidacao .
+  ?liquidacao ordp:depende ?empenho ;
+    ordp:compostoDe ?itemLiquidacao .
 }
 ```
 
@@ -240,11 +241,11 @@ SELECT
   ?autorizacaoDespesa
   ?urlPortal
 WHERE {     
-  ?liquidacao rdf:type odp:Liquidacao ;
-    odp:depende ?empenho ;
+  ?liquidacao rdf:type ordp:Liquidacao ;
+    ordp:depende ?empenho ;
     owl:sameAs ?urlPortal .
-  ?empenho rdf:type odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa .
+  ?empenho rdf:type ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa .
 }
 ```
 
@@ -255,10 +256,10 @@ SELECT
   ?credor
   (SUM(xsd:double(?valorTotal)) as ?valorLiquidado)
 WHERE {   
-  ?liquidacao a odp:Liquidacao ;
-    odp:quita ?credor;
-    odp:compostoDe ?itemLiquidacao .
-  ?itemLiquidacao odp:valorTotal ?valorTotal .
+  ?liquidacao a ordp:Liquidacao ;
+    ordp:quita ?credor;
+    ordp:compostoDe ?itemLiquidacao .
+  ?itemLiquidacao ordp:valorTotal ?valorTotal .
 }
 GROUP BY ?credor
 ```
@@ -267,11 +268,11 @@ GROUP BY ?credor
 
 ``` sql
 SELECT ?unidadeGestora (SUM(xsd:double(?valorTotal)) as ?valorLiquidado) WHERE {   
-  ?unidadeGestoraURI odp:realiza ?liquidacao ;
+  ?unidadeGestoraURI ordp:realiza ?liquidacao ;
     rdfs:label ?unidadeGestora .
-  ?liquidacao a odp:Liquidacao ;
-    odp:compostoDe ?itemLiquidacao .
-  ?itemLiquidacao odp:valorTotal ?valorTotal .
+  ?liquidacao a ordp:Liquidacao ;
+    ordp:compostoDe ?itemLiquidacao .
+  ?itemLiquidacao ordp:valorTotal ?valorTotal .
 }
 GROUP BY ?unidadeGestora ORDER BY DESC(?valorLiquidado)
 ```
@@ -284,8 +285,8 @@ SELECT
   ?unidadeGestora
   ?credor
 WHERE {   
-  ?pagamento odp:favorece/rdfs:label ?credor .   
-  ?unidadeGestoraURI odp:realiza ?pagamento ;
+  ?pagamento ordp:favorece/rdfs:label ?credor .   
+  ?unidadeGestoraURI ordp:realiza ?pagamento ;
     rdfs:label ?unidadeGestora .
 }
 ```
@@ -297,8 +298,8 @@ SELECT
   ?liquidacao
   ?pagamento
 WHERE {
-  ?pagamento odp:depende ?liquidacao .   
-  ?liquidacao rdf:type odp:Liquidacao .
+  ?pagamento ordp:depende ?liquidacao .   
+  ?liquidacao rdf:type ordp:Liquidacao .
 }
 ```
 
@@ -309,8 +310,8 @@ SELECT
   ?itemPagamento
   ?empenho
 WHERE {   
-  ?itemPagamento odp:depende ?empenho .   
-  ?empenho rdf:type odp:Empenho .
+  ?itemPagamento ordp:depende ?empenho .   
+  ?empenho rdf:type ordp:Empenho .
 }
 ```
 
@@ -324,11 +325,11 @@ SELECT
   ?autorizacaoDespesa
   ?urlPortal
 WHERE {     
-  ?pagamento rdf:type odp:Pagamento ;
-    odp:depende ?empenho ;
+  ?pagamento rdf:type ordp:Pagamento ;
+    ordp:depende ?empenho ;
     owl:sameAs ?urlPortal .     
-  ?empenho rdf:type odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa .
+  ?empenho rdf:type ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa .
 }
 ```
 
@@ -340,13 +341,13 @@ SELECT
   (SUM(xsd:double(?valorTotalAD)) as ?valorAD)
   (SUM(xsd:double(?valorTotalPago)) as ?valorPago)
 WHERE {
-  ?pagamento rdf:type odp:Pagamento ;
-    odp:depende ?empenho ;
-    odp:valorTotal ?valorTotalPago ;
+  ?pagamento rdf:type ordp:Pagamento ;
+    ordp:depende ?empenho ;
+    ordp:valorTotal ?valorTotalPago ;
     owl:sameAs ?urlPortal .     
-  ?empenho rdf:type odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa .
-  ?autorizacaoDespesa odp:valorDotacaoInicial ?valorTotalAD .
+  ?empenho rdf:type ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa .
+  ?autorizacaoDespesa ordp:valorDotacaoInicial ?valorTotalAD .
 }
 GROUP BY ?autorizacaoDespesa
 ```
@@ -359,13 +360,13 @@ SELECT
   (SUM(xsd:double(?valorTotalAD)) as ?valorAD)
   (SUM(xsd:double(?valorTotalPago)) as ?valorPago)
 WHERE {
-  ?pagamento rdf:type odp:Pagamento ;
-    odp:depende ?empenho ;
-    odp:valorTotal ?valorTotalPago ;
+  ?pagamento rdf:type ordp:Pagamento ;
+    ordp:depende ?empenho ;
+    ordp:valorTotal ?valorTotalPago ;
     owl:sameAs ?urlPortal .     
-  ?empenho rdf:type odp:Empenho ;
-    odp:refereSe ?autorizacaoDespesa .
-  ?autorizacaoDespesa odp:valorDotacaoInicial ?valorTotalAD .
+  ?empenho rdf:type ordp:Empenho ;
+    ordp:refereSe ?autorizacaoDespesa .
+  ?autorizacaoDespesa ordp:valorDotacaoInicial ?valorTotalAD .
 }
 GROUP BY ?autorizacaoDespesa
 ```
@@ -374,11 +375,11 @@ GROUP BY ?autorizacaoDespesa
 
 ``` sql
 SELECT ?unidadeGestora (SUM(xsd:double(?valorTotal)) as ?valorPago) WHERE {  
-  ?unidadeGestoraURI odp:realiza ?pagamento ;  
+  ?unidadeGestoraURI ordp:realiza ?pagamento ;  
     rdfs:label ?unidadeGestora .
-  ?pagamento a odp:Pagamento ;
-    odp:compostoDe ?itemPagamento .   
-  ?itemPagamento odp:valorTotal ?valorTotal .
+  ?pagamento a ordp:Pagamento ;
+    ordp:compostoDe ?itemPagamento .   
+  ?itemPagamento ordp:valorTotal ?valorTotal .
 }
 GROUP BY ?unidadeGestora ORDER BY DESC(?valorPago)
 ```

@@ -12,10 +12,10 @@ router.get('/credores/num-empenhos', function(req, res) {
 	var limit = req.query['limit'],
 		offset = req.query['offset']
 		query = 'SELECT ?nome ?codigo (count(?empenho) as ?nEmpenhos) WHERE {'
-		  + ' ?empenho a odp:Empenho ;'
-		  + ' 	odp:favorece ?credor .'
+		  + ' ?empenho a ordp:Empenho ;'
+		  + ' 	ordp:favorece ?credor .'
 		  + ' ?credor rdfs:label ?nome ;'
-		  + ' 	odp:codigo ?codigo .'
+		  + ' 	ordp:codigo ?codigo .'
 		  + ' }'
 		  + ' GROUP BY ?nome ?codigo'
 		  + ' ORDER BY DESC(?nEmpenhos)';
@@ -37,18 +37,18 @@ router.get('/credor/:codigo', function(req, res) {
 	var codigo = req.params.codigo,
 		query =   ' SELECT ?nome (count(?empenho) as ?nEmpenhos) (SUM(xsd:double(?valorEmpTotal)) as ?sumValorEmpTotal) (count(?pagamento) as ?nPagamentos) (SUM(xsd:double(?valorPagTotal)) as ?sumValorPagTotal) WHERE {{'
 				+ '  ?credor rdfs:label ?nome ;'
-				+ '  		  odp:codigo "' + codigo + '" .'
-				+ '  ?empenho a odp:Empenho ;'
-				+ '       odp:valorTotal ?valorEmpTotal ;'
-				+ '       odp:favorece ?credor .'
+				+ '  		  ordp:codigo "' + codigo + '" .'
+				+ '  ?empenho a ordp:Empenho ;'
+				+ '       ordp:valorTotal ?valorEmpTotal ;'
+				+ '       ordp:favorece ?credor .'
 				+ ' }'
 				+ ' UNION'
 				+ ' {'
 				+ '  ?credor rdfs:label ?nome ;'
-				+ '  		  odp:codigo "' + codigo + '" .'
-				+ '  ?pagamento a odp:Pagamento ;'
-				+ '       odp:valorTotal ?valorPagTotal ;'
-				+ '       odp:favorece ?credor .'
+				+ '  		  ordp:codigo "' + codigo + '" .'
+				+ '  ?pagamento a ordp:Pagamento ;'
+				+ '       ordp:valorTotal ?valorPagTotal ;'
+				+ '       ordp:favorece ?credor .'
 				+ ' }}'
 				+ ' GROUP BY ?nome';
 
@@ -61,11 +61,11 @@ router.get('/acoes/num-empenhos', function(req, res) {
 	var limit = req.query['limit'],
 		offset = req.query['offset']
 		query = 'SELECT ?acao ?codigo (count(?empenho) as ?nEmpenhos) WHERE {'
-		  + ' ?empenho a odp:Empenho ;'
-		  + ' 	odp:refereSe ?itemLoa .'
-		  + ' ?itemLoa odp:prescreveAcao ?acaoURI .'
+		  + ' ?empenho a ordp:Empenho ;'
+		  + ' 	ordp:refereSe ?itemLoa .'
+		  + ' ?itemLoa ordp:prescreveAcao ?acaoURI .'
 		  + ' ?acaoURI rdfs:label ?acao ;'
-		  + ' 	odp:codigo ?codigo .'
+		  + ' 	ordp:codigo ?codigo .'
 		  + ' }'
 		  + ' GROUP BY ?acao ?codigo'
 		  + ' ORDER BY DESC(?nEmpenhos)';
@@ -86,22 +86,22 @@ router.get('/acoes/num-empenhos', function(req, res) {
 router.get('/acao/:codigo', function(req, res) {
 	var codigo = req.params.codigo,
 		query =   ' SELECT ?acao (count(?empenho) as ?nEmpenhos) (SUM(xsd:double(?valorEmpTotal)) as ?sumValorEmpTotal) (count(?pagamento) as ?nPagamentos) (SUM(xsd:double(?valorPagTotal)) as ?sumValorPagTotal) WHERE {{'
-			  	+ ' ?itemLoa odp:prescreveAcao ?acaoURI .'
+			  	+ ' ?itemLoa ordp:prescreveAcao ?acaoURI .'
 			  	+ ' ?acaoURI rdfs:label ?acao ;'
-			  	+ ' 	odp:codigo  "' + codigo + '" .'
-				+ ' ?empenho a odp:Empenho ;'
-			  	+ ' 	odp:refereSe ?itemLoa .'
-				+ '  ?empenho a odp:Empenho ;'
-				+ '       odp:valorTotal ?valorEmpTotal .'
+			  	+ ' 	ordp:codigo  "' + codigo + '" .'
+				+ ' ?empenho a ordp:Empenho ;'
+			  	+ ' 	ordp:refereSe ?itemLoa .'
+				+ '  ?empenho a ordp:Empenho ;'
+				+ '       ordp:valorTotal ?valorEmpTotal .'
 			  	+ ' }'
 				+ ' UNION'
 				+ ' {'
-				+ ' ?itemLoa odp:prescreveAcao ?acaoURI .'
+				+ ' ?itemLoa ordp:prescreveAcao ?acaoURI .'
 			  	+ ' ?acaoURI rdfs:label ?acao ;'
-			  	+ ' 	odp:codigo  "' + codigo + '" .'
-				+ ' ?pagamento a odp:Pagamento ;'
-				+ '       odp:valorTotal ?valorPagTotal ;'
-				+ '       odp:depende/odp:refereSe ?itemLoa .'
+			  	+ ' 	ordp:codigo  "' + codigo + '" .'
+				+ ' ?pagamento a ordp:Pagamento ;'
+				+ '       ordp:valorTotal ?valorPagTotal ;'
+				+ '       ordp:depende/ordp:refereSe ?itemLoa .'
 				+ ' }}'
 				+ ' GROUP BY ?acao ?pagamento';
 
@@ -191,7 +191,7 @@ function executeQuery(query, callback) {
 	console.log(query);
 
 	conn.query({
-    	database: "dpf",
+    	database: "ordp",
     	query: query,
     	//'query.timeout': '20m'
 	}, callback);
